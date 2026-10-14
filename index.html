@@ -1,0 +1,189 @@
+(base) ihu@IHU-MacBook-Air-111 ~ % cat  /Users/ihu/Desktop/index.html 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Collegium — zamansız tasarım, özenli işçilik ve modern yaşam alanları.">
+  <meta name="theme-color" content="#f4f0e9">
+  <title>Collegium | Art of Furniture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--cream:#f4f0e9;--paper:#fbf9f5;--ink:#211b16;--brown:#49372a;--muted:#746a60;--line:#d9d0c5;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    .topbar{background:var(--brown);color:#f7f2ea;text-align:center;padding:9px 16px;font-size:10px;letter-spacing:1.7px;text-transform:uppercase}
+    header{height:82px;padding:0 5.5%;display:flex;align-items:center;justify-content:space-between;background:rgba(251,249,245,.96);position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(73,55,42,.12)}
+    .brand{display:inline-flex;flex-direction:column;gap:3px}
+    .brand-name{font-family:"Playfair Display",serif;font-size:27px;letter-spacing:7px;line-height:1}
+    .brand-tag{font-size:9px;letter-spacing:3px;text-align:center;text-transform:uppercase}
+    nav{display:flex;gap:32px;align-items:center;font-size:12px}
+    nav a,.text-link{transition:opacity .2s}
+    nav a:hover,.text-link:hover{opacity:.6}
+    .menu-button{display:none;border:0;background:none;font-size:25px;color:var(--ink)}
+    .hero{min-height:570px;position:relative;display:flex;align-items:center;background:#3d3025;overflow:hidden;color:white}
+    .hero-image{position:absolute;inset:0}
+    .hero-image img{object-position:center 56%;filter:brightness(.69)}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,16,12,.83) 0%,rgba(22,16,12,.56) 39%,rgba(22,16,12,.06) 100%)}
+    .hero-content{position:relative;z-index:1;width:min(590px,90%);margin-left:8%;padding:70px 0}
+    .eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 20px}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.collection-title{font-family:"Playfair Display",serif;font-weight:400}
+    h1{font-size:clamp(42px,5vw,68px);line-height:1.06;letter-spacing:-1.2px;margin-bottom:22px}
+    .hero-copy{font-size:14px;line-height:1.9;color:#eee6dc;max-width:390px;margin-bottom:30px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:15px 21px;border:1px solid currentColor;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;transition:background .2s,color .2s}
+    .button:hover{background:var(--cream);color:var(--ink)}
+    .section{padding:82px 5.5%}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
+    .section-head .eyebrow{color:var(--muted);margin-bottom:12px}
+    h2{font-size:clamp(32px,4vw,46px);margin-bottom:0;letter-spacing:-.8px}
+    .text-link{font-size:11px;border-bottom:1px solid var(--line);padding-bottom:7px;white-space:nowrap}
+    .collections{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .collection{position:relative;min-height:350px;overflow:hidden;background:#d8c9b8}
+    .collection img{position:absolute;inset:0;transition:transform .7s}
+    .collection:hover img{transform:scale(1.045)}
+    .collection:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(20,15,11,.7))}
+    .collection-info{position:absolute;z-index:1;bottom:22px;left:22px;right:22px;color:white;display:flex;justify-content:space-between;align-items:end}
+    .collection-title{font-size:27px;margin-bottom:4px}
+    .collection-subtitle{font-size:11px;letter-spacing:.4px;margin:0}
+    .arrow{font-size:25px;font-weight:300}
+    .story{display:grid;grid-template-columns:1fr 1fr;background:var(--cream)}
+    .story-photo{min-height:410px}
+    .story-copy{padding:70px clamp(32px,7vw,100px);display:flex;flex-direction:column;justify-content:center}
+    .story-copy .eyebrow{color:var(--muted);margin-bottom:14px}
+    .story-copy h2{margin-bottom:20px}
+    .story-copy p{font-size:13px;line-height:1.9;color:#64594f;max-width:470px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding:42px 5.5%;border-bottom:1px solid var(--line);background:var(--paper)}
+    .feature{border-left:1px solid var(--line);padding-left:20px}
+    .feature h3{font-family:"Playfair Display",serif;font-size:19px;font-weight:400;margin-bottom:8px}
+    .feature p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}
+    .contact{padding:76px 5.5%;display:flex;align-items:center;justify-content:space-between;gap:25px;background:#e8e0d5}
+    .contact .eyebrow{color:var(--muted);margin-bottom:12px}
+    .contact h2{margin-bottom:12px}
+    .contact p{font-size:13px;color:#65594e;margin:0;line-height:1.8}
+    .contact .button{background:var(--brown);color:white;border-color:var(--brown);flex-shrink:0}
+    .contact .button:hover{background:transparent;color:var(--brown)}
+    footer{background:#211b16;color:#eee6dc;padding:35px 5.5% 22px}
+    .footer-main{display:flex;justify-content:space-between;align-items:center;gap:28px;padding-bottom:28px}
+    footer nav{gap:24px;flex-wrap:wrap}
+    footer .brand-name{font-size:22px}
+    footer .brand-tag{font-size:8px}
+    .copyright{border-top:1px solid rgba(255,255,255,.17);padding-top:18px;display:flex;justify-content:space-between;gap:12px;font-size:10px;color:#bfb4a8}
+    .wa-float{position:fixed;right:22px;bottom:22px;z-index:9;background:#2f6e4f;color:white;border-radius:99px;padding:14px 18px;font-size:12px;box-shadow:0 5px 22px #0002}
+    @media(max-width:760px){
+      header{height:72px;padding:0 5%}.brand-name{font-size:22px;letter-spacing:5px}.brand-tag{font-size:8px;letter-spacing:2px}
+      .menu-button{display:block}nav#main-nav{display:none;position:absolute;top:71px;left:0;right:0;background:var(--paper);padding:22px 6%;flex-direction:column;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line)}
+      nav#main-nav.open{display:flex}
+      .hero{min-height:570px}.hero-content{margin-left:6%;padding:60px 0}.hero-image img{object-position:58% center}
+      .hero:after{background:linear-gradient(90deg,rgba(22,16,12,.82),rgba(22,16,12,.42))}
+      .section{padding:58px 5%}.section-head{align-items:flex-start;flex-direction:column}.collections{grid-template-columns:1fr;gap:13px}.collection{min-height:360px}
+      .story{grid-template-columns:1fr}.story-photo{min-height:280px}.story-copy{padding:48px 7%}
+      .features{grid-template-columns:1fr;gap:25px;padding:36px 7%}.feature{padding-left:17px}
+      .contact{padding:52px 6%;align-items:flex-start;flex-direction:column}.contact .button{margin-top:5px}
+      .footer-main{align-items:flex-start;flex-direction:column}.footer-main nav{align-items:flex-start;gap:18px}.copyright{flex-direction:column}
+      .wa-float{right:12px;bottom:12px;padding:12px 14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">İnegöl'den evinize · Zamansız tasarım, özenli işçilik</div>
+  <header>
+    <a class="brand" href="#home" aria-label="Collegium ana sayfa">
+      <span class="brand-name">COLLEGIUM</span><span class="brand-tag">Art of Furniture</span>
+    </a>
+    <button class="menu-button" id="menu-button" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav id="main-nav" aria-label="Ana menü">
+      <a href="#home">Ana Sayfa</a><a href="#collections">Koleksiyonlar</a><a href="#about">Hakkımızda</a><a href="#contact">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85" alt="Sıcak tonlarda modern bir yaşam alanı">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Timeless design</p>
+        <h1>Modern yaşam,<br>daha iyi bir yarın.</h1>
+        <p class="hero-copy">Collegium; zamansız tasarımı, özenli işçiliği ve modern yaşam anlayışını bir araya getirir. Mobilyadan fazlası, yaşam tarzınızın bir parçası.</p>
+        <a class="button" href="#collections">Koleksiyonları keşfet <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="collections">
+      <div class="section-head">
+        <div><p class="eyebrow">Collegium koleksiyonları</p><h2>Öne Çıkan Koleksiyonlar</h2></div>
+        <a class="text-link" href="#contact">Tüm koleksiyonlar ↗</a>
+      </div>
+      <div class="collections">
+        <a class="collection" href="#contact" aria-label="Berlin yemek odası hakkında bilgi al">
+          <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=85" alt="Modern yemek odası ve ahşap masa" loading="lazy">
+          <div class="collection-info"><div><div class="collection-title">Berlin</div><p class="collection-subtitle">Yemek Odası</p></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="collection" href="#contact" aria-label="Berlin koltuk takımı hakkında bilgi al">
+          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1000&q=85" alt="Nötr tonlarda modern oturma odası" loading="lazy">
+          <div class="collection-info"><div><div class="collection-title">Berlin</div><p class="collection-subtitle">Koltuk Takımı</p></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="collection" href="#contact" aria-label="Salerno koleksiyonu hakkında bilgi al">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Minimal ve doğal malzemelerle dekore edilmiş iç mekân" loading="lazy">
+          <div class="collection-info"><div><div class="collection-title">Salerno</div><p class="collection-subtitle">Yemek Odası</p></div><span class="arrow">↗</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="story" id="about">
+      <div class="story-photo">
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=85" alt="Klasik mimariden ilham alan taş mimari detay" loading="lazy">
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">Collegium hakkında</p>
+        <h2>Mobilyanın sanatı.</h2>
+        <p>Geçmişin mimari estetiğinden ve modern yaşamdan ilham alan Collegium, yaşam alanlarınıza karakter katan mobilyalar sunar. Her tasarımda sadelik, denge ve işçiliği bir araya getiriyoruz.</p>
+        <p>İnegöl, Türkiye'den doğan tasarımlarımızla eviniz için zamansız parçalar oluşturmayı hedefliyoruz.</p>
+        <a class="text-link" href="#contact" style="align-self:flex-start;margin-top:8px">Bize ulaşın ↗</a>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Collegium değerleri">
+      <div class="feature"><h3>Özenli Malzeme Seçimi</h3><p>Görünüm ve kullanım deneyimini birlikte düşünen tasarımlar.</p></div>
+      <div class="feature"><h3>İnegöl İşçiliği</h3><p>Mobilya üretim geleneğinden gelen deneyim ve detaylara özen.</p></div>
+      <div class="feature"><h3>Size Özel İletişim</h3><p>Ürün, ölçü ve teslimat seçenekleri hakkında doğrudan bilgi alın.</p></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div><p class="eyebrow">Birlikte tasarlayalım</p><h2>Yeni yaşam alanınız burada başlıyor.</h2><p>Koleksiyonlar, ölçüler ve iş birliği seçenekleri için bizimle iletişime geçin.</p></div>
+      <a class="button whatsapp-link" href="https://wa.me/905XXXXXXXXX?text=Merhaba%2C%20Collegium%20koleksiyonlar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan ulaşın ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <a class="brand" href="#home"><span class="brand-name">COLLEGIUM</span><span class="brand-tag">Art of Furniture</span></a>
+      <nav aria-label="Alt menü"><a href="#home">Ana Sayfa</a><a href="#collections">Koleksiyonlar</a><a href="#about">Hakkımızda</a><a href="#contact">İletişim</a></nav>
+    </div>
+    <div class="copyright"><span>© <span id="year"></span> Collegium. Tüm hakları saklıdır.</span><span>Art of Furniture</span></div>
+  </footer>
+  <a class="wa-float whatsapp-link" href="https://wa.me/905XXXXXXXXX?text=Merhaba%2C%20Collegium%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp ↗</a>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const nav = document.getElementById('main-nav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? '×' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
